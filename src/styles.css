@@ -1,0 +1,282 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'PingFang SC', 'Microsoft YaHei', system-ui, -apple-system,
+    'Segoe UI', sans-serif;
+  background: #f4f6f2;
+  color: #243024;
+}
+
+.page {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 24px 20px 48px;
+}
+
+header h1 {
+  margin: 0 0 6px;
+  font-size: 26px;
+  color: #2e5d34;
+}
+
+.subtitle {
+  margin: 0 0 20px;
+  color: #5a6b58;
+  font-size: 14px;
+}
+
+.inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.panel {
+  background: #fff;
+  border: 1px solid #d8e0d3;
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+
+.panel h2 {
+  margin: 0 0 4px;
+  font-size: 16px;
+  color: #2e5d34;
+}
+
+.hint {
+  margin: 0 0 8px;
+  font-size: 12px;
+  color: #7a8876;
+}
+
+textarea {
+  width: 100%;
+  font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.5;
+  border: 1px solid #c6d1c0;
+  border-radius: 6px;
+  padding: 8px 10px;
+  resize: vertical;
+  background: #fbfdfa;
+}
+
+textarea:focus {
+  outline: 2px solid #8fbd7f;
+  outline-offset: -1px;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  margin: 16px 0;
+  flex-wrap: wrap;
+}
+
+button {
+  border: 1px solid #6f9a5f;
+  background: #fff;
+  color: #2e5d34;
+  border-radius: 8px;
+  padding: 9px 18px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+button:hover:not(:disabled) {
+  background: #e8f2e2;
+}
+
+button.primary {
+  background: #3f7d46;
+  color: #fff;
+  border-color: #3f7d46;
+  font-weight: 600;
+}
+
+button.primary:hover:not(:disabled) {
+  background: #356a3b;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.error {
+  background: #fdecec;
+  border: 1px solid #e2a3a3;
+  color: #8c2f2f;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin: 12px 0;
+  font-size: 14px;
+}
+
+.results h2 {
+  margin: 26px 0 8px;
+  font-size: 18px;
+  color: #2e5d34;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #d8e0d3;
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+
+.card.highlight {
+  border-color: #3f7d46;
+  background: #eef7ea;
+}
+
+.card-label {
+  font-size: 12px;
+  color: #6a7a66;
+}
+
+.card-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: #2e5d34;
+  margin: 2px 0;
+}
+
+.card-sub {
+  font-size: 12px;
+  color: #7a8876;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border: 1px solid #d8e0d3;
+  border-radius: 10px;
+  overflow: hidden;
+  font-size: 13px;
+}
+
+th,
+td {
+  border-bottom: 1px solid #e6ece2;
+  padding: 7px 10px;
+  text-align: left;
+}
+
+th {
+  background: #eaf1e5;
+  color: #3a5a3a;
+  font-weight: 600;
+}
+
+.rank-table tbody tr {
+  cursor: pointer;
+}
+
+.rank-table tbody tr:hover {
+  background: #f2f8ee;
+}
+
+.rank-table tr.selected {
+  background: #dcecd4;
+  font-weight: 600;
+}
+
+.mono {
+  font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  font-size: 12px;
+}
+
+.badge {
+  display: inline-block;
+  border-radius: 5px;
+  padding: 1px 7px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.op-M,
+.badge.op-M {
+  background: #e2f0d8;
+  color: #2e6b2e;
+}
+
+.op-L,
+.badge.op-L {
+  background: #fde9d2;
+  color: #94561a;
+}
+
+.op-F,
+.badge.op-F {
+  background: #e6e0f4;
+  color: #5a3d8c;
+}
+
+.legend {
+  display: flex;
+  gap: 8px;
+  margin: 6px 0 8px;
+}
+
+.row-L {
+  background: #fdf5ec;
+}
+
+.row-F {
+  background: #f6f3fb;
+}
+
+.is-missing td {
+  font-style: italic;
+}
+
+.tag {
+  display: inline-block;
+  margin-left: 6px;
+  font-size: 11px;
+  padding: 0 6px;
+  border-radius: 4px;
+  background: #e6e0f4;
+  color: #5a3d8c;
+  font-style: normal;
+}
+
+.tag-L {
+  background: #fde9d2;
+  color: #94561a;
+}
+
+tr.total td {
+  font-weight: 700;
+  background: #eaf1e5;
+}
+
+footer {
+  margin-top: 32px;
+  text-align: center;
+  font-size: 12px;
+  color: #8a9788;
+}
+
+@media (max-width: 820px) {
+  .inputs {
+    grid-template-columns: 1fr;
+  }
+  .summary {
+    grid-template-columns: 1fr 1fr;
+  }
+}

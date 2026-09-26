@@ -1,0 +1,7 @@
+services:
+  crossdating:
+    build: .
+    container_name: tree-ring-crossdating
+    ports:
+      - "8080:3000"
+    restart: unless-stopped
