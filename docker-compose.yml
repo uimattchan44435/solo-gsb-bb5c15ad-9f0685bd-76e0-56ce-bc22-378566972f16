@@ -1,0 +1,11 @@
+services:
+  crossdating:
+    build: .
+    image: tree-ring-crossdating:latest
+    container_name: tree-ring-crossdating
+    ports:
+      # 宿主机 8080 → 容器内 3001
+      - "8080:3001"
+    environment:
+      - PORT=3001
+    restart: unless-stopped
